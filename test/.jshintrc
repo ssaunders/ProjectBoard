@@ -1,0 +1,18 @@
+{
+  //"globalstrict": true,
+  "node": true,
+  "lastsemic": true,
+  "expr": true,
+  "predef": [ "-Promise" ],
+  "globals": {
+    "afterEach": false,
+    "beforeEach": false,
+    "after": false,
+    "before": false,
+    "describe": false,
+    "it": false,
+    "sinon": false,
+    "expect": false,
+    "chai": false
+  }
+}

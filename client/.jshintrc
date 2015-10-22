@@ -1,0 +1,12 @@
+{
+  "globalstrict": true,
+  "browser": true,
+  "devel": true, // for window.console
+  "lastsemic": true,
+  "globals": {
+    "angular": false,
+    "module": false,
+    "_": false,
+    "$": false
+  }
+}

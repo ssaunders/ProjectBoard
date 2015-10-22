@@ -1,0 +1,8 @@
+{
+  "name": "Hack Night SLC Project Board",
+  "description": "A communal site where people can see what projects are going on during Hack Night SLC",
+  "repository": "https://github.com/ssaunders/ProjectBoard",
+  "keywords": []
+  /*"logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "image": "heroku/nodejs"*/
+}

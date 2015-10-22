@@ -2,7 +2,7 @@
   "name": "hacknight-proj-board",
   "version": "0.0.1",
   "description": "A communal site where people can see what projects are going on during Hack Night SLC",
-  "main": "index.js",
+  "main": "server/app.js",
   "scripts": {
     "test": "grunt test"
   },
@@ -10,14 +10,28 @@
     "type": "git",
     "url": "https://github.com/ssaunders/ProjectBoard"
   },
-  "author": "Stephen Saunders",
+  "author": "waterdrag1@yahoo.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ssaunders/ProjectBoard/issues"
   },
   "homepage": "https://github.com/ssaunders/ProjectBoard",
   "dependencies": {
-    "express": "^4.13.3",
-    "grunt": "^0.4.5"
+    "angular": "1.4.x",
+    "express": "4.13.x",
+    "grunt": "0.4.x"
+  },
+  "devDependencies": {
+    "mocha-istanbul": "0.2.x",
+    "bluebird": "2.10.x",
+    "chai": "3.4.x",
+    "chai-as-promised": "5.1.x",
+    "karma": "0.13.x",
+    "sinon": "1.17.x",
+    "sinon-bluebird": "2.0.x",
+    "sinon-chai": "^2.8.0"
+  },
+  "engines": {
+    "node": "0.12.x"
   }
 }

@@ -1,0 +1,14 @@
+/* See http://jscs.info/rules.html for examples */
+{
+  /* "disallowFunctionDeclarations": true, */
+  "disallowKeywords": ["with"],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowOperatorBeforeLineBreak": ["."],
+  "disallowSpacesInCallExpression": true,
+  "disallowTrailingComma": true,
+  "disallowTrailingWhitespace": true,
+  /* "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",*/
+  /* "requireMultipleVarDecl": true,*/
+  "disallowEmptyBlocks": true
+}

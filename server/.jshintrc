@@ -1,0 +1,7 @@
+{
+  //"globalstrict": true,
+  "node": true,
+  "lastsemic": true,
+  "expr": true,
+  //"predef": [ "-Promise" ]
+}
