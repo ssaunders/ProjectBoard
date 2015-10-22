@@ -1,0 +1,23 @@
+{
+  "name": "hacknight-proj-board",
+  "version": "0.0.1",
+  "description": "A communal site where people can see what projects are going on during Hack Night SLC",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssaunders/ProjectBoard"
+  },
+  "author": "Stephen Saunders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssaunders/ProjectBoard/issues"
+  },
+  "homepage": "https://github.com/ssaunders/ProjectBoard",
+  "dependencies": {
+    "express": "^4.13.3",
+    "grunt": "^0.4.5"
+  }
+}
