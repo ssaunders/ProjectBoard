@@ -1,7 +1,11 @@
 {
-  //"globalstrict": true,
   "node": true,
+  //"globalstrict": true,
   "lastsemic": true,
   "expr": true,
-  //"predef": [ "-Promise" ]
+  //"predef": [ "-Promise" ],
+  "globals": {
+  	"require": false,
+  	"modules": false
+  }
 }
