@@ -1,10 +1,11 @@
 {
   "name": "hacknight-proj-board",
   "version": "0.0.1",
-  "description": "A communal site where people can see what projects are going on during Hack Night SLC",
+  "description": "A communal site where people can see the active projects for Hack Night SLC",
   "main": "server/app.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "refresh": "rm -rf node_modules && npm i"
   },
   "repository": {
     "type": "git",
