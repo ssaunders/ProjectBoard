@@ -20,8 +20,9 @@ var app = express();
 
 // --------- Begin static routes ---------
 app.use('/static', express.static(__dirname + '/../vendor'));
-app.use('/client', express.static(__dirname + '/../client'));
-// app.use('/vendor', express.static(__dirname + '/../vendor'));
+app.use('/client', express.static(__dirname + '../client'));
+app.use('/img', express.static(__dirname + '/../img'));
+
 
 // if (qhostname.indexOf('dev') !== -1) {
 //   app.use('/board/public/vendor', express.static(__dirname + '/../vendor'));

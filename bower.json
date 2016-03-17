@@ -1,0 +1,21 @@
+{
+  "name": "hn-proj-board",
+  "version": "0.0.1",
+  "authors": [
+    "StephenS <stersaun@gmail.com>"
+  ],
+  "description": "A communal site where people can see the active projects for Hack Night SLC",
+  "main": "src/server/server.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.x",
+    "normalize-css": "normalize.css#3.0.x"
+  }
+}

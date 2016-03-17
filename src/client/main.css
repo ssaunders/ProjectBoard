@@ -19,11 +19,24 @@
 	clear: both;
 }
 
+.left-side {
+	padding-right: 60px
+}
 .home-link {
 	font-size: 25px;
 	font-weight: bold;
+	vertical-align: middle;
+}
+.hn-logo {
+	height: 40px;
+	width: 40px;
+	background-color: white;
+	vertical-align: middle;
 }
 
+/*
+   Menu
+*/
 .links {
 	list-style: none;
 	border: 1px solid white;
@@ -34,6 +47,8 @@
 .links:hover {
 	border-bottom: 3px
 }
+
+/** END NAV BAR **/
 
 body {
 	margin: 0;
