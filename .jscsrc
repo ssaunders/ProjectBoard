@@ -10,5 +10,6 @@
   "disallowTrailingWhitespace": true,
   /* "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",*/
   /* "requireMultipleVarDecl": true,*/
-  "disallowEmptyBlocks": true
+  "disallowEmptyBlocks": true,
+  "disallowNestedTernaries": true
 }

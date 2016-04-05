@@ -11,16 +11,17 @@ var express = require('express');
 // var authorization = require('./middleware/authorization');
 
 //Routers
+var appRoutes = require('./routes/app-routes');
 var boardRoutes = require('./routes/board-routes');
 var peopleRoutes = require('./routes/people-routes');
 var projectRoutes = require('./routes/project-routes');
-var appRoutes = require('./routes/app-routes');
 
 var app = express();
 
 // --------- Begin static routes ---------
+console.log("__dirname + '/../client':",__dirname + '/../client');
+app.use('/client', express.static(__dirname + '/../client'));
 app.use('/static', express.static(__dirname + '/../vendor'));
-app.use('/client', express.static(__dirname + '../client'));
 app.use('/img', express.static(__dirname + '/../img'));
 
 

@@ -1,1 +1,2 @@
-angular.module('projboard')
+'use strict';
+angular.module('projBoard',[]);

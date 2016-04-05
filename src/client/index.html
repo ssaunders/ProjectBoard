@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="projBoard">
 <head>
-	<meta charset="UTF-8">
-	<title>HN.PB</title>
+    <meta charset="UTF-8">
+    <title>HN.PB</title>
 
+    <!-- dependencies -->
     <link rel="stylesheet" href="/static/normalize-css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="/client/main.css">
-</head>
-<body>
-    <div class="nav-bar">
-        <div class="left-side">
-            <img src="/img/hn_logo.png" class="hn-logo" alt="PB">
-            <a class="home-link">Project Board</a><!-- translate -->
-        </div>
-<!-- link div -->
-    </div>
 
-	<script type="text/javascript" src="/client/index.js"></script>
-    <script type="text/javascript" src="/static/angular.js"></script>
+    <!-- app stuff -->
+    <link rel="stylesheet" type="text/css" href="/client/main.css">
+    <link rel="stylesheet" type="text/css" href="/client/menu/menu.css">
+    <link rel="stylesheet" type="text/css" href="/client/projectCard/projectCard.css">
+</head>
+<body ng-controller="mainController">
+    <div menu-bar></div>
+    <div project-card ng-repeat="card in cardList"></div>
+
+    <!-- dependencies -->
+    <script type="text/javascript" src="/static/angular/angular.js"></script>
+
+    <!-- app stuff -->
+    <script type="text/javascript" src="/client/angular-conf.js"></script>
+    <script type="text/javascript" src="/client/index.js"></script>
+    <!-- controllers -->
+    <script type="text/javascript" src="/client/mainController.js"></script>
+    <!-- directives -->
+    <script type="text/javascript" src="/client/menu/directive.js"></script>
+    <script type="text/javascript" src="/client/projectCard/projectCard.js"></script>
+    <!-- services -->
+    <script type="text/javascript" src="/client/services/pgDataService/index.js"></script>
+    <script type="text/javascript" src="/client/services/cardService/index.js"></script>
+    <script type="text/javascript" src="/client/services/cardService/cardServiceHelper.js"></script>
+
     <script>
 
     // (function(window){
@@ -29,3 +43,8 @@
     </script>
 </body>
 </html>
+
+<!-- service ideas:
+    convert i18/angular to moment abbreviations
+
+ -->
