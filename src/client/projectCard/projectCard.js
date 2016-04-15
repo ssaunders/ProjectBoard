@@ -9,7 +9,7 @@ angular.module('projBoard')
     templateUrl: '/client/projectCard/projectCard.html',
     replace: true,
     link: function($scope, iElm, iAttrs, controller) {
-      console.log("got a card!");
+      console.log("got a card!", $scope.projectDef);
     }
   };
-}]);
+}]); 

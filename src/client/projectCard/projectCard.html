@@ -1,3 +1,27 @@
 <div class="project-card-wrapper">
-	<div class="card-title">{{title}}</div>
+    <div class="card-title-bar">
+        <div class="card-title">{{projectDef.title}}</div>
+        <div class="edit-link" ng-if="projectDef.userCanEdit"></div>
+        <div class="card-links">{{projectDef.links}}</div><!-- directive -->
+    </div>
+    <div class="card-content">
+        <div class="row contact">
+            <label class="card-label">Main Contact:</label> <!-- todo: translate -->
+            <span>{{projectDef.primaryContact}}</span>
+        </div>
+        <div class="row resources">
+            <label class="card-label">Languages & Frameworks:</label> <!-- todo: translate -->
+            <span>{{projectDef.resources}}</span>
+        </div>
+        <div class="row the-help">
+            <label class="card-label">Additional People:</label> <!-- todo: translate -->
+            <span>{{projectDef.codeMonkeys}}</span>
+        </div>
+        <div class="row description">
+            <label class="card-label">Description:</label> <!-- todo: translate -->
+            <span>{{projectDef.description}}</span>
+        </div>
+    </div>
+
+    <!-- collapsed version ng-if="collaped"-->    
 </div>

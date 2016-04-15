@@ -4,10 +4,11 @@
 .nav-bar {
     background: black;
     color: white;
-    /*min-height: 2em;*/
     font-size: 16px;
     text-align: center;
     padding: 5px;
+    position: fixed;
+    width: 100%;
 }
 .nav-bar > * {
     float: left;

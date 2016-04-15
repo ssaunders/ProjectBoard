@@ -8,7 +8,7 @@ angular.module('projBoard')
     cardSvc.getAll()
       .then(function (cardList) {
         $scope.cardList = cardList;
-      })
+      });
     console.log("got into controller");
   }
 ]);
