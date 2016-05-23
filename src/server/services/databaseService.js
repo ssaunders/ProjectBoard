@@ -1,29 +1,58 @@
 var Promise = require('bluebird');
 var _ = require('lodash');
+var pg = require('pg-then');
 
 module.exports = {
+  saveProject: saveProject, //also updates
   getProject: getProject,
-  getAllProjects: getAllProjects
+  getAllProjects: getAllProjects,
+  deleteProject: deleteProject
 };
+
+function saveProject(proj) {
+  return Promise.resolve();
+}
 
 function getProject(id) {
   //connect to DB
   //send request
   //return data
 
-  var project = _.find(mockDB.projects, {id: id});
+  var getProjectQuery = '';
 
-  return Promise.resolve(project);
+  pg.connect(_getFn);
+
+  function _getFn(err, client, done) {
+    console.log("I gots it");
+
+    client.query('SELECT * FROM projects', function(err, result) {
+      var project = _.find(mockDB.projects, {
+        id: id
+      });
+
+      done();
+      // return Promise.resolve(project);
+    });
+
+  }
 }
 
 function getAllProjects() {
-  //connect to DB
-  //send request
-  //return data
+  console.log(process.env.DATABASE_URL);
 
-  return Promise.resolve(mockDB.projects);
+  return pg.Pool(process.env.DATABASE_URL)
+    .query('SELECT * FROM hacknight.projects')
+    .then(function(result) {
+      return result.rows;
+    })
+    .catch(function(e) {
+      console.log("something broke!", e);
+    });
 }
 
+function deleteProject(projId) {
+  return Promise.resolve();
+}
 
 ////DB MOCK
 mockDB = {};
@@ -56,3 +85,13 @@ mockDB.projects = [{
   description: 'Suspendisse lacinia tellus nisl, sed ultrices dolor convallis et. Sed gravida auctor orci eget faucibus. Curabitur ac elit commodo, consequat elit id, interdum massa. Pellentesque lectus neque, eleifend quis turpis pretium, faucibus commodo eros. Fusce tempus ex diam, ac accumsan justo interdum eu. Fusce at nibh eu nulla consequat facilisis. Aliquam erat volutpat.\n\nInteger scelerisque est in mattis sagittis. Quisque ultricies ac arcu eget sodales.',
   links: {}
 }];
+
+/*
+INSERT INTO hacknight.project (main_contact_name,
+project_name,
+resources,
+code_monkeys,
+description)
+    VALUES ('Yojimbo', 'Special something', 'JS, Node', 'Bob, John, and Mary', 'A really fancy default project');
+
+*/

@@ -9,6 +9,5 @@ angular.module('projBoard')
       .then(function (cardList) {
         $scope.cardList = cardList;
       });
-    console.log("got into controller");
   }
 ]);

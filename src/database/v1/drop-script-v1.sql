@@ -3,7 +3,7 @@
 BEGIN TRANSACTION;
  
 --DROP SEQUENCE IF EXISTS hacknight.projectId_seq; --should automatically drop
-DROP TABLE IF EXISTS hacknight.project;
+DROP TABLE IF EXISTS hacknight.projects;
 
 DROP SCHEMA IF EXISTS hacknight;
 

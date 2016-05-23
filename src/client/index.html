@@ -11,10 +11,16 @@
     <link rel="stylesheet" type="text/css" href="/client/main.css">
     <link rel="stylesheet" type="text/css" href="/client/menu/menu.css">
     <link rel="stylesheet" type="text/css" href="/client/projectCard/projectCard.css">
+    <link rel="stylesheet" type="text/css" href="/client/projectCardAdd/projectCardAdd.css">
 </head>
 <body ng-controller="mainController">
     <div menu-bar></div>
-    <div project-card ng-repeat="card in cardList"></div>
+    <div class="cardList content">
+        <div project-card-add></div>
+        <div project-card ng-repeat="card in cardList" project-def="card"></div>
+    </div>
+
+    <span></span>
 
     <!-- dependencies -->
     <script type="text/javascript" src="/static/angular/angular.js"></script>
@@ -27,6 +33,7 @@
     <!-- directives -->
     <script type="text/javascript" src="/client/menu/directive.js"></script>
     <script type="text/javascript" src="/client/projectCard/projectCard.js"></script>
+    <script type="text/javascript" src="/client/projectCardAdd/projectCardAdd.js"></script>
     <!-- services -->
     <script type="text/javascript" src="/client/stores/cardStore/index.js"></script>
 

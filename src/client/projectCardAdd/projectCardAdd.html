@@ -1,0 +1,37 @@
+<div class="add-card"  ng-class="{hidden: !editing}">
+<div class="add-card-buttons">
+    <div class="button" ng-class="{add: !editing, cancel: editing}"ng-click="toggleEdit($event)">
+        <span class="text">+</span>
+    </div>
+</div>
+<div class="project-card-wrapper">
+    <div class="card-title-bar">
+        <input class="card-title" ng-model="projectDef.title">
+        <div class="save button">
+            <img src="img/save24.png">
+        </div>
+
+        <!-- <input class="card-links" ng-model="projectDef.links"><!-- directive -->
+    </div>
+    <div class="card-content">
+        <div class="row contact">
+            <label class="card-label">Main Contact:</label> <!-- todo: translate -->
+            <input class="input" ng-model="projectDef.primaryContact">
+        </div>
+        <div class="row resources">
+            <label class="card-label">Languages & Frameworks:</label> <!-- todo: translate -->
+            <input class="input" ng-model="projectDef.resources"></span>
+        </div>
+        <div class="row the-help">
+            <label class="card-label">Additional People:</label> <!-- todo: translate -->
+            <input class="input" ng-model="projectDef.codeMonkeys">
+        </div>
+        <div class="row description">
+            <label class="card-label description">Description:</label> <!-- todo: translate -->
+            <textarea class="text-area" ng-model="projectDef.description"></textarea>
+        </div>
+    </div>
+
+    <!-- collapsed version ng-if="collaped"-->    
+</div>
+</div>

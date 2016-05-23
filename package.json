@@ -5,7 +5,8 @@
   "main": "server/app.js",
   "scripts": {
     "test": "grunt test",
-    "refresh": "rm -rf node_modules && npm i"
+    "refresh": "rm -rf node_modules && npm i",
+    "start": "nodemon --watch src/server src/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
     "bower": "^1.7.7",
     "express": "4.13.x",
     "grunt": "0.4.x",
-    "lodash": "^4.10.0"
+    "lodash": "^4.10.0",
+    "pg": "^4.5.3",
+    "pg-then": "^1.2.1"
   },
   "devDependencies": {
     "mocha-istanbul": "0.2.x",

@@ -1,4 +1,4 @@
-<div class="project-card-wrapper">
+<div class="project-card-wrapper" id={{projectDef.project_id}}>
     <div class="card-title-bar">
         <div class="card-title">{{projectDef.title}}</div>
         <div class="edit-link" ng-if="projectDef.userCanEdit"></div>
@@ -7,7 +7,7 @@
     <div class="card-content">
         <div class="row contact">
             <label class="card-label">Main Contact:</label> <!-- todo: translate -->
-            <span>{{projectDef.primaryContact}}</span>
+            <span>{{projectDef.primary_contact}}</span>
         </div>
         <div class="row resources">
             <label class="card-label">Languages & Frameworks:</label> <!-- todo: translate -->
@@ -15,7 +15,7 @@
         </div>
         <div class="row the-help">
             <label class="card-label">Additional People:</label> <!-- todo: translate -->
-            <span>{{projectDef.codeMonkeys}}</span>
+            <span ng-class="{italic: !projectDef.code_monkeys}">{{projectDef.code_monkeys || "none"}}</span>
         </div>
         <div class="row description">
             <label class="card-label">Description:</label> <!-- todo: translate -->

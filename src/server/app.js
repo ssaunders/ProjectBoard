@@ -51,7 +51,7 @@ app.get('/board/status', function(req, res) {
 
 app.use('/board', boardRoutes);
 // app.use('/people', peopleRoutes);
-// app.use('/projects', projectRoutes);
+app.use('/projects/', projectRoutes);
 app.use('/', appRoutes);
 
 // --------- Begin global error handler ---------

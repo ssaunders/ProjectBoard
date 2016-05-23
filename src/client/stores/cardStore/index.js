@@ -4,6 +4,7 @@ angular.module('projBoard')
     '$q',
     '$http',
     function($q, $http) {
+      /// CARD IS A FRONT END CONSTRUCT. PROJECT ON THE BACK END.
       /** Card definition:
         {
           id: 'id'
